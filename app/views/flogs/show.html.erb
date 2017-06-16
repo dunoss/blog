@@ -2,12 +2,16 @@
   <%= @flog.who %>
 </h1>
 
-<p class="date">
-  Submitted <%= time_ago_in_words(@flog.created_at) %> ago
-</p>
 
 <p class="details">
   <%= @flog.date %>
   <%= @flog.location %>
   <%= @flog.description %>
+</p>
+
+
+<p class="date">
+  Submitted <%= time_ago_in_words(@flog.created_at) %> ago
+  | <%= link_to 'Edit', edit_flog_path(@flog) %>
+  | <%= link_to 'Delete', flog_path(@flog), method: :delete, data: { confirm: 'Are You Sure?' } %>
 </p>
