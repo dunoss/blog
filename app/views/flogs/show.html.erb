@@ -1,0 +1,13 @@
+<h1 class="title">
+  <%= @flog.who %>
+</h1>
+
+<p class="date">
+  Submitted <%= time_ago_in_words(@flog.created_at) %> ago
+</p>
+
+<p class="details">
+  <%= @flog.date %>
+  <%= @flog.location %>
+  <%= @flog.description %>
+</p>

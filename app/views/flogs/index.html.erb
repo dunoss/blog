@@ -1,0 +1,9 @@
+<h1>F.LOG</h1>
+
+<% @flogs.each do |flog| %>
+  <div class="flog_wrapper">
+    <h2 class="title"><%= link_to flog.who, flog %></h2>
+    <p class="date"><%= flog.created_at.strftime("%B, %d, %Y") %></p>
+
+  </div>
+<% end %>
