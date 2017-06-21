@@ -24,10 +24,15 @@ class FlogsController < ApplicationController
   def update
     @flog = Flog.find(params[:id])
 
-    if @flog.update(params[:flog].permit(:who, :date, :location, :description))
-      redirect_to @flog
-    else render 'edit'
-    end
+    @flog.update_attribute(:who, params[:flog].who)
+
+    redirect_to @flog
+
+    # if @flog.update(params[:flog].permit(:who, :date, :location, :description))
+    #   @flog.save
+    #   redirect_to @flog
+    # else render 'edit'
+    # end
   end
 
   def destroy
