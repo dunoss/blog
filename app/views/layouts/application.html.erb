@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>F.LOG</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/flogs">Home</a></li>
+        <li><a href="flogs/new">F.LOG IT</a></li>
+        <li><a href="/flogs">MY F.LOGS</a></li>
+      </ul>
+    </nav><!-- /.navbar -->
     <%= yield %>
   </body>
 </html>
