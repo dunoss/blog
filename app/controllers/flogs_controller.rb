@@ -4,6 +4,7 @@ class FlogsController < ApplicationController
   end
 
   def new
+    @flog = Flog.new
   end
 
   def create
@@ -24,15 +25,11 @@ class FlogsController < ApplicationController
   def update
     @flog = Flog.find(params[:id])
 
-    @flog.update_attribute(:who, params[:flog].who)
-
-    redirect_to @flog
-
-    # if @flog.update(params[:flog].permit(:who, :date, :location, :description))
-    #   @flog.save
-    #   redirect_to @flog
-    # else render 'edit'
-    # end
+      if @flog.update(params[:flog].permit(:who, :date, :location, :description))
+        redirect_to @flog
+      else
+        render 'edit'
+      end
   end
 
   def destroy
