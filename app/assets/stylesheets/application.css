@@ -17,3 +17,33 @@
 ul {
   list-style-type: none;
 }
+
+.navbar {
+  height: 100vh;
+  width: 15%;
+  float: left;
+  border-right: solid;
+  font-size: 20px;
+}
+
+.page {
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.logo {
+  text-align: center;
+}
+
+li {
+  border: solid;
+  border-width: medium;
+  text-align: center;
+  margin-right: 20%;
+  padding: 3%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
